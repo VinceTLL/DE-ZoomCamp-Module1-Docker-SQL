@@ -1,6 +1,5 @@
-def main():
-    print("Hello from de-zoomcamp-module1-docker-sql!")
+from ingest_data import run_ingestion
 
 
 if __name__ == "__main__":
-    main()
+    run_ingestion()

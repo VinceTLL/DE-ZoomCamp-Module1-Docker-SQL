@@ -19,5 +19,6 @@ dependencies = [
 dev = [
     "jupyter>=1.1.1",
     "lab>=8.8",
+    "mypy>=1.19.1",
     "pgcli>=4.3.0",
 ]
