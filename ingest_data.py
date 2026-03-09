@@ -124,3 +124,10 @@ def run_ingestion(user,password,host,port,database,target_table,prefix,file_name
         print("Ingestion job finished.")
 
 
+#docker run -it --rm -e POSTGRES_USER="root" -e POSTGRES_PASSWORD="root" -e POSTGRES_DB="ny_taxi" -v ny_taxi_postgres_data:/var/lib/postgresql/data -p 5432:5432 --network=pg-network --name pgdatabase postgres:13
+
+#docker run -it --rm -e PGADMIN_DEFAULT_EMAIL=admin@admin.com -e PGADMIN_DEFAULT_PASSWORD="root" -v pgadmin_data:/var/lib/pgadmin -p 8085:80 --network=pg-network --name pgadmin dpage/pgadmin4
+
+
+#docker run -it --network=pg-network taxi_ingest:v001 --user=root --password=root --host=pgdatabase --port=5432 --database=ny_taxi --target_table=yellow_taxi_data --prefix="https://d37ci6vzurychx.cloudfront.net/trip-data/" --file_name=green_tripdata --batch_size=10000 --year=2025 --month=11
+#
